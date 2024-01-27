@@ -26,7 +26,7 @@ jobs:
     - name: Run ADB Automation script
       run: |
         while true; do
-          python3 FULLCLICK3.py.py
+          python3 FULLCLICK3.py
           EXIT_CODE=$?
           sleep 20  # หยุดการทำงานของสคริปต์นี้เป็นเวลา 20 วินาที
 
