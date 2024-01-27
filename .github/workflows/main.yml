@@ -34,7 +34,7 @@ jobs:
     - name: Run ADB Automation script
       run: |
         while true; do
-          python3 MaserADB.py
+          python3 FULLCLICK3.py
           EXIT_CODE=$?
           sleep 20
           if [ $EXIT_CODE -eq 0 ]; then
