@@ -1,5 +1,4 @@
 #!/bin/bash
-
 while true; do
     python FULLCLICK3.py  # รันโปรแกรม Python
     EXIT_CODE=$?       # เก็บรหัสออกของโปรแกรม Python
