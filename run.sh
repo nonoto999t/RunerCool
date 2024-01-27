@@ -1,7 +1,7 @@
 #!/bin/bash
 
 while true; do
-    python3 MaserADB.py  # รันโปรแกรม Python
+    python3 FULLCLICK3.py  # รันโปรแกรม Python
     EXIT_CODE=$?       # เก็บรหัสออกของโปรแกรม Python
     sleep 1800            # หยุดการทำงานของ script นี้เป็นเวลา 5 วินาที
 
