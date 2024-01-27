@@ -18,8 +18,9 @@ jobs:
       with:
         python-version: 3.8
 
-    - name: Install ADB
+    - name: Update packages and install ADB
       run: |
+        sudo apt-get update
         sudo apt-get install android-tools-adb
 
     - name: Run ADB Automation script
