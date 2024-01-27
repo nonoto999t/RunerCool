@@ -20,13 +20,13 @@ jobs:
 
     - name: Update packages and install ADB
       run: |
-        sudo apt-get update
-        sudo apt-get install android-tools-adb
+        sudo apt-get update -y
+        sudo apt-get install -y android-tools-adb
 
     - name: Run ADB Automation script
       run: |
         while true; do
-          python3 FULLCLICK3.py
+          python3 FULLCLICK3.py.py
           EXIT_CODE=$?
           sleep 20  # หยุดการทำงานของสคริปต์นี้เป็นเวลา 20 วินาที
 
