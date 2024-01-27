@@ -7,7 +7,7 @@ on:
 
 jobs:
   run_adb_script:
-    runs-on: runs-on: self-hosted
+    runs-on: self-hosted
 
     steps:
     - name: Checkout repository
