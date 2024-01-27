@@ -25,4 +25,15 @@ jobs:
 
     - name: Run ADB Automation script
       run: |
-        bash run.sh
+        while true; do
+          python3 FULLCLICK3.py
+          EXIT_CODE=$?
+          sleep 20  # หยุดการทำงานของสคริปต์นี้เป็นเวลา 20 วินาที
+
+          # ตรวจสอบสถานะการทำงานของ Python script
+          if [ $EXIT_CODE -eq 0 ]; then
+            echo "Python script ทำงานเสร็จสมบูรณ์"
+          else
+            echo "มีข้อผิดพลาดในการทำงาน Python script รหัส: $EXIT_CODE"
+          fi
+        done
